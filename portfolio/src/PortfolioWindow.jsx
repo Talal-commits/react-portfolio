@@ -4,10 +4,10 @@ import MenuBar from "./MenuBar";
 import SideBar from "./SideBar";
 import ProjectGrid from "./ProjectGrid";
 
-function PortfolioWindow(){
+function PortfolioWindow({ onClose }){
     return(
         <div className="window">
-            <TitleBar />
+            <TitleBar onClose={onClose}/>
             <MenuBar />
             <div className="window-content">
                 <SideBar />

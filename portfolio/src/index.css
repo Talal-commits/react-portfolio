@@ -167,7 +167,7 @@ body {
   max-width: 90vw;
   height: 500px;
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #ece9d8;

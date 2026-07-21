@@ -1,8 +1,8 @@
-function Icon(props) {
+function Icon({ image, label, onDoubleClick }) {
     return (
-        <div className="icon">
-            <button><img src={props.image} /></button>
-            <p>{props.label}</p>
+        <div className="icon" onDoubleClick={onDoubleClick}>
+            <button><img src={image} /></button>
+            <p>{label}</p>
         </div>
     );
 }
