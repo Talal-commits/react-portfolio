@@ -1,7 +1,12 @@
 import { useState } from "react";
 import shutdown from "./assets/shutdown.png";
-import standby from "./assets/standby.png"
-import restart from "./assets/restart.png"
+import standby from "./assets/standby.png";
+import restart from "./assets/restart.png";
+import github from "./assets/github.png";
+import gmail from "./assets/gmail.png";
+import instagram from "./assets/instagram.png";
+import phone from "./assets/phone.png";
+import linkedin from "./assets/Linkedin.png";
 
 
 function StartMenu(){
@@ -13,17 +18,20 @@ function StartMenu(){
             </div>
             <div className="menu">
                 <ul>
-                    <li>Github</li>
-                    <li>LinkedIn</li>
-                    <li>Instagram</li>
-                    <li>Email</li>
-                    <li>Contact Me</li>
+                    <li><a href="https://github.com/Talal-commits" target="_blank"><img src={github} alt="github-icon" /><p>Github</p></a></li>
+                    <hr />
+                    <li><a href="https://www.linkedin.com/in/talal-munir-88b393380/" target="_blank"><img src={linkedin} alt="gmail-icon" /><p>LinkedIn</p></a></li>
+                    <hr />
+                    <li><a href="https://www.instagram.com/itx_talaaal" target="_blank"><img src={instagram} alt="instagram-icon" /><p>Instagram</p></a></li>
+                    <hr />
+                    <li><a href="" target="_blank"><img src={gmail} alt="phone-icon" /><p>Email</p></a></li>
+                    <hr />
+                    <li><a href="" target="_blank"><img src={phone} alt="phone-icon" /><p>Contact Me</p></a></li>
                 </ul>
             </div>
             <div className="power-buttons">
-                <button><img src={standby} alt="standby-button" /></button>
-                <button><img src={shutdown} alt="shutdown-button" /></button>
-                <button><img src={restart} alt="restart-button" /></button>
+                <span><img src={standby} alt="standby-button" /><p>Log Off</p></span>
+                <span><img src={shutdown} alt="shutdown-button" /><p>Turn Off</p></span>
             </div>
         </div>
     );
