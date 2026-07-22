@@ -4,6 +4,7 @@ import speaker from "./assets/speaker.png"
 import flag from "./assets/flag.png"
 
 function Taskbar(){
+    const[isStartMenuOpen, setIsStartMenuOpen] = useState();
     const [date, setDate] = useState(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
 
     useEffect(() => {
@@ -15,13 +16,13 @@ function Taskbar(){
 
     return(
         <div className="taskbar">
-            <div className="start-button">
+            <div className="start-button" >
                 <img src={startImage} />
                 <h2>Start</h2>
             </div>
             <div className="tab-section">
                 <div className="single-tab">
-                    <p>Talal Munir | Web Developer</p>
+                    <p>Talal Munir | Software Engineer</p>
                 </div>
             </div>
             <div className="icon-tray">
