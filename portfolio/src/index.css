@@ -499,3 +499,86 @@ body {
 .power-buttons span{
   cursor: pointer;
 }
+
+.form-container {
+  flex: 1;
+  background-color: #ffffff;
+  border: 2px solid #7f9db9;
+  padding: 16px;
+  border-radius: 2px;
+}
+
+#xp-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-group label {
+  color: #000000;
+  font-size: 11px;
+}
+
+/* XP Input Fields */
+input[type="text"],
+input[type="email"],
+textarea {
+  font-family: Tahoma, sans-serif;
+  font-size: 11px;
+  padding: 5px 6px;
+  border: 1px solid #7f9db9;
+  outline: none;
+  background-color: #ffffff;
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 0;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #0055ea;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* XP Buttons */
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.xp-btn {
+  min-width: 75px;
+  padding: 4px 14px;
+  font-family: Tahoma, sans-serif;
+  font-size: 11px;
+  background: linear-gradient(180deg, #ffffff 0%, #ece9d8 80%, #d8d2bd 100%);
+  border: 1px solid #003c74;
+  border-radius: 3px;
+  box-shadow: inset 0 0 1px #ffffff;
+  cursor: pointer;
+}
+
+.xp-btn:hover {
+  background: linear-gradient(180deg, #fff2c3 0%, #eac262 100%);
+  border-color: #e59700;
+}
+
+.xp-btn:active {
+  background: #cdbe9e;
+  box-shadow: inset 1px 1px 1px #707070;
+}
+
+.xp-btn.primary {
+  font-weight: bold;
+}

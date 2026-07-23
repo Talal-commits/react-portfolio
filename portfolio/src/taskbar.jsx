@@ -3,7 +3,7 @@ import startImage from "./assets/start.png"
 import speaker from "./assets/speaker.png"
 import flag from "./assets/flag.png"
 
-function Taskbar(){
+function Taskbar({onToggleStartMenu}){
     const[isStartMenuOpen, setIsStartMenuOpen] = useState();
     const [date, setDate] = useState(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
 
@@ -16,7 +16,7 @@ function Taskbar(){
 
     return(
         <div className="taskbar">
-            <div className="start-button" >
+            <div className="start-button" onClick={onToggleStartMenu}>
                 <img src={startImage} />
                 <h2>Start</h2>
             </div>

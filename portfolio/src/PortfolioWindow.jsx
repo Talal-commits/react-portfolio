@@ -7,10 +7,10 @@ import ProjectGrid from "./ProjectGrid";
 function PortfolioWindow({ onClose }){
     return(
         <div className="window">
-            <TitleBar onClose={onClose}/>
+            <TitleBar title={"Talal Munir | Software Engineer"} onClose={onClose}/>
             <MenuBar />
             <div className="window-content">
-                <SideBar />
+                <SideBar title={"Project Categories"} categories={["Frontend", "Backend", "UI / UX"]} />
                 <ProjectGrid />
             </div>
         </div>

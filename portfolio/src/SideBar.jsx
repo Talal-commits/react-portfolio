@@ -1,12 +1,12 @@
-function SideBar() {
+function SideBar({title, categories=[]}) {
     return (
         <div className="side-bar">
             <div className="project-list">
-                <h3>Project Categories <span className="chevron">^</span></h3>
+                <h3>{title} <span className="chevron">^</span></h3>
                 <ul>
-                    <li>Frontend</li>
-                    <li>Backend</li>
-                    <li>Designs</li>
+                    {categories.map((category) => (
+                        <li key={category}>{category}</li>
+                    ))}
                 </ul>
             </div>
             <div className="project-list">
