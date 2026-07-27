@@ -3,6 +3,7 @@ import Taskbar from './taskbar';
 import PortfolioWindow from './PortfolioWindow';
 import StartMenu from './StartMenu';
 import ContactForm from './ContactForm';
+import About from './About';
 import { use, useState } from 'react';
 
 function App() {
@@ -26,6 +27,8 @@ function App() {
       
 
       <ContactForm title={"Project Categories"} categories={["Email: real.talal2025@gmail.com"]} />
+
+      <About />
     </>
   );
 }
