@@ -5,15 +5,22 @@ import StartMenu from './StartMenu';
 import ContactForm from './ContactForm';
 import About from './About';
 import { use, useState } from 'react';
+import Resume from './Resume';
 
 function App() {
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [isWindowOpen, setIsWindowOpen] = useState(false);
   const [isStartMenuOpen, setIsStartMenuOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
 
   return (
     <>
-      <Background onOpenWindow={() => setIsWindowOpen(true)}/>
+      <Background 
+        onOpenWindow={() => setIsWindowOpen(true)}
+        onOpenAbout={() => setIsAboutOpen(true)}
+        onOpenResume={() => setIsResumeOpen(true)}
+      />
       
       {isWindowOpen && (
         <PortfolioWindow onClose={() => setIsWindowOpen(false)} />
@@ -26,9 +33,12 @@ function App() {
         )}
       
 
-      <ContactForm title={"Project Categories"} categories={["Email: real.talal2025@gmail.com"]} />
+      {isContactOpen && (
+        <ContactForm title={"Project Categories"} categories={["Email: real.talal2025@gmail.com"]} onClose={() => setIsContactOpen(false)} />
+      )}
 
-      <About />
+      {isAboutOpen && <About onClose={() => setIsAboutOpen(false)} />}
+      {isResumeOpen && <Resume onClose={() => setIsResumeOpen(false)} />}
     </>
   );
 }

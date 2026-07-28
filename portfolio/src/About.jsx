@@ -1,10 +1,10 @@
 import TitleBar from "./TitleBar";
 import MenuBar from "./MenuBar";
 
-function About() {
+function About({ onClose }) {
     return (
         <div className="window">
-            <TitleBar title={"About Me.txt - Notepad"} />
+            <TitleBar title={"About Me.txt - Notepad"} onClose={onClose} />
             <MenuBar />
             <div className="window-content">
                 <div className="paragraph">

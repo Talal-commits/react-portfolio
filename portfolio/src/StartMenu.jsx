@@ -9,7 +9,7 @@ import phone from "./assets/phone.png";
 import linkedin from "./assets/Linkedin.png";
 
 
-function StartMenu(){
+function StartMenu({ onClose, onOpenContact }){
     return(
         <div className="start-menu">
             <div className="profile">
@@ -26,7 +26,7 @@ function StartMenu(){
                     <hr />
                     <li><a href="" target="_blank"><img src={gmail} alt="phone-icon" /><p>Email</p></a></li>
                     <hr />
-                    <li><a href="" target="_blank"><img src={phone} alt="phone-icon" /><p>Contact Me</p></a></li>
+                    <li><a href="#" onClick={(e) => { e.preventDefault(); onOpenContact(); onClose(); }}><img src={phone} alt="phone-icon" /><p>Contact Me</p></a></li>
                 </ul>
             </div>
             <div className="power-buttons">

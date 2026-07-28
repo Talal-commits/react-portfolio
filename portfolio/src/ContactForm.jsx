@@ -4,10 +4,10 @@ import SideBar from "./SideBar";
 import ProjectGrid from "./ProjectGrid";
 import Form from "./form";
 
-function ContactForm({ title, categories }){
+function ContactForm({ title, categories, onClose }){
     return(
         <div className="window">
-            <TitleBar title={"Send Message to Talal Munir"} />
+            <TitleBar title={"Send Message to Talal Munir"} onClose={onClose} />
             <MenuBar />
             <div className="window-content">
                 <SideBar title={title} categories={categories} />
